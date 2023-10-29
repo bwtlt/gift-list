@@ -1,0 +1,560 @@
+$black: #222222;
+$green : #034F1B;
+$white : #E6DCB1;
+$gold : #CEAC5C;
+$light-red : #BD3634;
+$light-red-2 : #D8716F;
+$dark-red : #7E121D;
+
+.container {
+  color: $black;
+  padding: 0 6rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 2rem 0;
+  }
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    align-items: center;
+  }
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .intro {
+    flex-direction: column;
+  }
+}
+
+.introText {
+    text-align: justify;
+}
+
+.introRaw {
+  font-family: var(--amandine-font);
+  font-size: 1.5rem;
+}
+
+.introParents {
+  font-family: var(--learningcurve-font);
+  font-size: 2rem;
+}
+
+.gifterForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-items: center;
+  width: auto;
+  gap: 0.2em;
+}
+
+@media (max-width: 768px) {
+  .gifterForm {
+    flex-direction: column;
+  }
+}
+
+.listTitle {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .listTitle {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.sublistTitle {
+    color: $green;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $white;
+    border-radius: 20px;
+    padding: 0 1em;
+    transform: translateZ(-1px);
+}
+
+.itemSpecs {
+    margin: 1em;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 0.6rem;
+    width: 100%;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex-direction: column;
+  }
+  .itemInfo {
+    flex-direction: column;
+  }
+}
+
+.itemName {
+    font-weight: 500;
+}
+
+.introImageContainer {
+  position: relative;
+  height: 20rem;
+  min-width: 25rem;
+  clip-path: circle(31.2% at 179px 160px);
+}
+
+.itemImageContainer {
+  position: relative;
+  height: 8rem;
+  min-width: 8rem;
+  clip-path: circle(40%);
+  background-color: white;
+}
+
+.giftedItemImage {
+  opacity: 40%;
+}
+
+.itemPrice {
+  color: $dark-red;
+}
+
+.itemDescription {
+  white-space: pre-line;
+}
+
+.item a {
+    color: $gold;
+}
+
+.giftButton {
+  white-space: nowrap;
+  align-items: center;
+  background-color: $light-red;
+  border: 2px solid $black;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #FFF;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  width: 200px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.giftButton:after {
+  background-color: $black;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.giftButton:hover:after {
+  transform: translate(0, 0);
+}
+
+.giftButton:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.giftButton:hover {
+  outline: 0;
+}
+
+@media (max-width: 768px) {
+  .giftButton {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.gifted {
+  white-space: nowrap;
+  align-items: center;
+  background-color: $light-red-2;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: $white;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  min-width: 200px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+  .gifted {
+    margin-bottom: 1rem;
+  }
+}
+
+.gifterFormButtons {
+  padding-left: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  font-family: var(--playful-christmas-font);
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  color: $green;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin: 0 .5rem;
+}
+
+$glass: rgba(255, 255, 255, 0.2);
+$glass-icon: rgba(255, 255, 255, 0.3);
+$gradient: linear-gradient(35deg, red, purple);
+$option: #320a28;
+
+.filterControls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: $white;
+  border-radius: 20px;
+  padding: 1em 1em;
+  transform: translateZ(-1px);
+}
+
+/* <select> styles */
+.select {
+  /* Reset */
+  appearance: none;
+  border: 2px solid #111;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 15em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9a/Caret_down_font_awesome.svg)
+      no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, $glass-icon 3em, $glass 3em);
+  color: #111;
+  border-radius: 0.25em;
+  cursor: pointer;
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: $option;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterControls {
+    flex-direction: column;
+  }
+}
+
+.filterButton {
+  margin: 10px 0 10px 0;
+  white-space: nowrap;
+  align-items: center;
+  background-color: $gold;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  width: 200px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.filterButton:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(4px, 4px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.filterButton:hover:after {
+  transform: translate(0, 0);
+}
+
+.filterButton:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.filterButton:hover {
+  outline: 0;
+}
+
+.gifter {
+  color: #BD7B7B;
+  white-space: nowrap;
+}
+
+.question {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.formGroup {
+  display: flex;
+  gap: 5px;
+}
+
+.formField {
+  height: 40px;
+}
+
+.giftedContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+  .giftedContainer {
+    flex-direction: column;
+  }
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: $light-red;
+  gap: 5px;
+  margin: 1em 0;
+  padding: 1em 0;
+  width: auto;
+  border-radius: 20px;
+}
+
+.passwordField {
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column;
+    justify-content: stretch;
+  }
+}
+
+.giftingButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
