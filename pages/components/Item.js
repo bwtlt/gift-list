@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import styles from '../../styles/BirthList.module.scss'
 
 export default function Item(props) {
   const item = props.item
   const [gifted, setGifted] = useState(item?.gifted)
+  const [cancelling, setCancelling] = useState(false);
   let component
   let image = '/items/dejaoffert.jpeg'
 
@@ -15,7 +16,44 @@ export default function Item(props) {
 
   if (gifted) {
     component = <div className={styles.giftedContainer}>
-      <div className={styles.gifted}>Déjà offert</div>
+      {cancelling ?
+        <div className={styles.cancelling}>
+        <div>
+          Êtes-vous sûr ?
+        </div>
+        <div className={styles.cancellingButtons}>
+          <button className={styles.gifterFormButton} role="button" onClick={
+            () => {
+              setGifted(false)
+              const updater = {}
+              updater.gifted = false
+              const itemRef = props.database.collection('christmas2023').doc(item?.id)
+              itemRef.update(updater)
+                .then(() => {
+                  console.log('Document successfully updated!')
+                })
+                .catch((error) => {
+                  // The document probably doesn't exist.
+                  console.error('Error updating document: ', error)
+                })
+            }
+          }>Oui</button>
+          <button className={styles.gifterFormButton} role="button" onClick={
+            () => {
+              setGifted(true)
+              setCancelling(false)
+            }
+          }>Non</button>
+          </div>
+        </div>
+        : <>
+        <div className={styles.gifted}>Réservé par le Père Noël</div>
+          <button className={styles.gifterFormButton} role="button" onClick={
+            () => {
+              setCancelling(true);
+            }
+          }>Annuler</button>
+        </>}
     </div>
   } else if (item?.giftable === false) {
     component = <></>
@@ -37,7 +75,7 @@ export default function Item(props) {
                 console.error('Error updating document: ', error)
               })
           }
-        }>Réservé par le Père Noël</button>
+        }>Réserver</button>
       </div>
     </div>
   }

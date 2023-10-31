@@ -1,5 +1,6 @@
 $black: #222222;
 $green : #034F1B;
+$light-green : #759666;
 $white : #E6DCB1;
 $gold : #CEAC5C;
 $light-red : #BD3634;
@@ -34,10 +35,10 @@ $dark-red : #7E121D;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -47,10 +48,10 @@ $dark-red : #7E121D;
 }
 
 .body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 .footer {
@@ -71,10 +72,10 @@ $dark-red : #7E121D;
 }
 
 .intro {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1000px) {
@@ -84,7 +85,7 @@ $dark-red : #7E121D;
 }
 
 .introText {
-    text-align: justify;
+  text-align: justify;
 }
 
 .introRaw {
@@ -95,6 +96,16 @@ $dark-red : #7E121D;
 .introParents {
   font-family: var(--learningcurve-font);
   font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .introRaw {
+    font-size: 1.2rem;
+  }
+
+  .introParents {
+    font-size: 1.6rem;
+  }
 }
 
 .gifterForm {
@@ -133,30 +144,31 @@ $dark-red : #7E121D;
 }
 
 .sublistTitle {
-    color: $green;
-    font-weight: 700;
-    font-size: 1.2rem;
+  color: $green;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0.8rem 0;
 }
 
 .item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: $white;
-    border-radius: 20px;
-    padding: 0 1em;
-    transform: translateZ(-1px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $light-green;
+  border-radius: 20px;
+  padding: 0 1em;
+  transform: translateZ(-1px);
 }
 
 .itemSpecs {
-    margin: 1em;
-    padding: 0 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    row-gap: 0.6rem;
-    width: 100%;
+  margin: 1em;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 0.6rem;
+  width: 100%;
 }
 
 .itemInfo {
@@ -171,20 +183,28 @@ $dark-red : #7E121D;
   .item {
     flex-direction: column;
   }
+
   .itemInfo {
     flex-direction: column;
   }
 }
 
 .itemName {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .introImageContainer {
   position: relative;
-  height: 20rem;
+  height: 50rem;
   min-width: 25rem;
-  clip-path: circle(31.2% at 179px 160px);
+  clip-path: circle(31.2%);
+}
+
+@media (max-width: 768px) {
+  .introImageContainer {
+    height: 20rem;
+    clip-path: circle(31.2% at center 160px);
+  }
 }
 
 .itemImageContainer {
@@ -208,7 +228,7 @@ $dark-red : #7E121D;
 }
 
 .item a {
-    color: $gold;
+  color: #FFF;
 }
 
 .giftButton {
@@ -221,7 +241,7 @@ $dark-red : #7E121D;
   color: #FFF;
   cursor: pointer;
   display: flex;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   height: 48px;
   justify-content: center;
@@ -276,9 +296,9 @@ $dark-red : #7E121D;
   background-color: $light-red-2;
   border-radius: 8px;
   box-sizing: border-box;
-  color: $white;
+  color: #FFF;
   display: flex;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   height: 48px;
   justify-content: center;
@@ -307,8 +327,38 @@ $dark-red : #7E121D;
   gap: 5px;
 }
 
-@media (max-width: 768px) {
+.gifterFormButton {
+  background-color: $light-red;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+
+.gifterFormButton:hover,
+.gifterFormButton:focus {
+  background-color: #F082AC;
+}
+@media (max-width: 768px) {}
 
 .title a {
   color: #0070f3;
@@ -420,17 +470,18 @@ $option: #320a28;
   width: 15em;
   height: 3em;
   padding: 0 4em 0 1em;
-  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9a/Caret_down_font_awesome.svg)
-      no-repeat right 0.8em center / 1.4em,
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9a/Caret_down_font_awesome.svg) no-repeat right 0.8em center / 1.4em,
     linear-gradient(to left, $glass-icon 3em, $glass 3em);
   color: #111;
   border-radius: 0.25em;
   cursor: pointer;
+
   /* <option> colors */
   option {
     color: inherit;
     background-color: $option;
   }
+
   /* Remove focus outline */
   &:focus {
     outline: none;
@@ -454,7 +505,7 @@ $option: #320a28;
   color: #111;
   cursor: pointer;
   display: flex;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   height: 48px;
   justify-content: center;
@@ -557,4 +608,16 @@ $option: #320a28;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.cancelling {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+}
+
+.cancellingButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
 }

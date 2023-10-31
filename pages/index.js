@@ -3,7 +3,7 @@ import firebase from '../lib/firebase'
 import 'firebase/firestore'
 import 'firebase/storage'
 import Head from 'next/head'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Item from './components/Item'
 import Script from 'next/script'
 import styles from '../styles/BirthList.module.scss'
@@ -27,7 +27,6 @@ export default function Home() {
   const [items, setItems] = useState([])
   const [giftedItems, setGiftedItems] = useState([])
   const [loadedDb, setLoadedDb] = useState(false)
-  const [introImage, setIntroImage] = useState('')
 
   useEffect(() => {
     if (authUser && !loadedDb) {
@@ -145,7 +144,7 @@ export default function Home() {
                     <br></br>
                   </p>
                   <p className={styles.introParents}>
-                    (Note de Papa et Mama : Il existe plus de mille jouet sur les plateformes comme Le bon coin, Vinted...
+                    Note de Papa et Mama : Il existe plus de mille jouet sur les plateformes comme Le bon coin, Vinted...
                     ou encore dans les vide-greniers... alors même si les lutins du Père Noël travaillent surement très très bien,
                     on aimerait vraiment que vous fassiez l&apos;effort de vous tourner vers de l&apos;occasion
                     (dans la mesure du possible),
@@ -155,17 +154,17 @@ export default function Home() {
                     Ce n&apos;est pas une liste exhaustive, faites vous plaisir, et cela lui fera forcement plaisir.
                     Nous ne tenons pas à savoir qui offre quoi, pour avoir la surprise nous aussi (oui, on adore la Magie de Noël)
                     <br></br>
-                    Alors il vous suffit de cliquer sur &quot;Réservé par le Père Noël &quot;
+                    Alors il vous suffit de cliquer sur &quot;Réserver &quot;
                     <br></br>
                     Vous pouvez revenir en arrière à tout moment.
                     <br></br>
                     Merci.
                     <br></br>
-                    L & B)
+                    L & B
                   </p>
                 </div>
                 <div className={styles.introImageContainer}>
-                  <Image className={styles.introImage} src="/public/items/IMG_1731.jpeg" layout="fill" objectFit="contain" alt="Les heureux parents"></Image>
+                  <Image className={styles.introImage} src="/intro.jpeg" layout="fill" objectFit="contain" alt="Les heureux parents"></Image>
                 </div>
               </div>
               <form action="#" className={styles.filterControls}>
@@ -193,11 +192,13 @@ export default function Home() {
                 </div>
               </>
               <>
-                <div className={styles.listTitle}>Déjà offerts</div>
+                <div className={styles.sublistTitle}>Déjà réservés par le Père Noël</div>
                 <div className={styles.list}>
-                  {giftedItems.filter((item) => filterItem(item)).map((item) => {
-                    return (<Item key={item.id} item={item} database={db} />)
-                  })}
+                  {giftedItems.length === 0 ?
+                  <div>Rien pour le moment</div>
+                    : giftedItems.filter((item) => filterItem(item)).map((item) => {
+                      return (<Item key={item.id} item={item} database={db} />)
+                    })}
                 </div>
               </>
 
