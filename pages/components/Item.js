@@ -14,6 +14,21 @@ export default function Item(props) {
     image = '/items/' + item?.image
   }
 
+  function updateGifted(isGifted) {
+    setGifted(isGifted)
+    const updater = {}
+    updater.gifted = isGifted
+    const itemRef = props.database.collection('christmas2023').doc(item?.id)
+    itemRef.update(updater)
+      .then(() => {
+        console.log('Document successfully updated!')
+      })
+      .catch((error) => {
+        // The document probably doesn't exist.
+        console.error('Error updating document: ', error)
+      })
+  }
+
   if (gifted) {
     component = <div className={styles.giftedContainer}>
       {cancelling ?
@@ -23,20 +38,7 @@ export default function Item(props) {
         </div>
         <div className={styles.cancellingButtons}>
           <button className={styles.gifterFormButton} role="button" onClick={
-            () => {
-              setGifted(false)
-              const updater = {}
-              updater.gifted = false
-              const itemRef = props.database.collection('christmas2023').doc(item?.id)
-              itemRef.update(updater)
-                .then(() => {
-                  console.log('Document successfully updated!')
-                })
-                .catch((error) => {
-                  // The document probably doesn't exist.
-                  console.error('Error updating document: ', error)
-                })
-            }
+            () => updateGifted(false)
           }>Oui</button>
           <button className={styles.gifterFormButton} role="button" onClick={
             () => {
@@ -61,20 +63,7 @@ export default function Item(props) {
     component = <div className={styles.giftedContainer}>
       <div className={styles.giftingButtons}>
         <button className={styles.giftButton} role="button" onClick={
-          () => {
-            setGifted(true)
-            const updater = {}
-            updater.gifted = true
-            const itemRef = props.database.collection('christmas2023').doc(item?.id)
-            itemRef.update(updater)
-              .then(() => {
-                console.log('Document successfully updated!')
-              })
-              .catch((error) => {
-                // The document probably doesn't exist.
-                console.error('Error updating document: ', error)
-              })
-          }
+          () => updateGifted(true)
         }>Réserver</button>
       </div>
     </div>

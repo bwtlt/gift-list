@@ -44,34 +44,6 @@ export default function Home() {
           }
         })
       })
-      // Get the download URL
-      storage.ref().child('IMG_1731.jpeg').getDownloadURL()
-        .then((url) => {
-          console.log('coucou' + url)
-        })
-        .catch((error) => {
-          // A full list of error codes is available at
-          // https://firebase.google.com/docs/storage/web/handle-errors
-          switch (error.code) {
-            case 'storage/object-not-found':
-              // File doesn't exist
-              console.log('file doesnt exist')
-              break
-            case 'storage/unauthorized':
-              // User doesn't have permission to access the object
-              console.log('permission error')
-              break
-            case 'storage/canceled':
-              // User canceled the upload
-              console.log('canceled')
-              break
-
-            case 'storage/unknown':
-              // Unknown error occurred, inspect the server response
-              console.log('unknown')
-              break
-          }
-        })
       setLoading(false)
       console.log('Items retrieved succesfully')
       setLoadedDb(true)
