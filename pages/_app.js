@@ -9,33 +9,32 @@ const playfulChristmasFont = localFont({
   src: [
     {
       path: '../public/fonts/playful_christmas-webfont.woff2',
-      weight: '400',
-    },
-  ],
+      weight: '400'
+    }
+  ]
 })
 const amandineFont = localFont({
   src: [
     {
       path: '../public/fonts/amandine-webfont.woff2',
-      weight: '400',
-    },
-  ],
+      weight: '400'
+    }
+  ]
 })
 const learningCurveFont = localFont({
   src: [
     {
       path: '../public/fonts/learningcurve-webfont.woff2',
-      weight: '400',
-    },
-  ],
+      weight: '400'
+    }
+  ]
 })
 
-function MyApp({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
   return <AuthUserProvider>
     {process.env.NEXT_PUBLIC_MAINTENANCE_MODE
       ? <Maintenance />
-      :
-      <>
+      : <>
         <style jsx global>{`
         :root {
           /* ... */

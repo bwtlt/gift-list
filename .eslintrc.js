@@ -17,6 +17,14 @@ module.exports = {
     'react'
   ],
   rules: {
-    eqeqeq: 1
+    eqeqeq: 1,
+    'react/no-unknown-property': [
+      2,
+      {
+        ignore: [
+          'jsx', 'global'
+        ]
+      }
+    ]
   }
 }

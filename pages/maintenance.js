@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/Maintenance.module.scss'
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 
 export default function Maintenance () {
   return (

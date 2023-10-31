@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import Image from 'next/legacy/image'
 import styles from '../../styles/BirthList.module.scss'
 
-export default function Item(props) {
+export default function Item (props) {
   const item = props.item
   const [gifted, setGifted] = useState(item?.gifted)
-  const [cancelling, setCancelling] = useState(false);
+  const [cancelling, setCancelling] = useState(false)
   let component
   let image = '/items/dejaoffert.jpeg'
 
@@ -14,7 +14,7 @@ export default function Item(props) {
     image = '/items/' + item?.image
   }
 
-  function updateGifted(isGifted) {
+  function updateGifted (isGifted) {
     setGifted(isGifted)
     const updater = {}
     updater.gifted = isGifted
@@ -31,8 +31,8 @@ export default function Item(props) {
 
   if (gifted) {
     component = <div className={styles.giftedContainer}>
-      {cancelling ?
-        <div className={styles.cancelling}>
+      {cancelling
+        ? <div className={styles.cancelling}>
         <div>
           Êtes-vous sûr ?
         </div>
@@ -52,7 +52,7 @@ export default function Item(props) {
         <div className={styles.gifted}>Réservé par le Père Noël</div>
           <button className={styles.gifterFormButton} role="button" onClick={
             () => {
-              setCancelling(true);
+              setCancelling(true)
             }
           }>Annuler</button>
         </>}

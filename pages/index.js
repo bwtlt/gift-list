@@ -3,7 +3,7 @@ import firebase from '../lib/firebase'
 import 'firebase/firestore'
 import 'firebase/storage'
 import Head from 'next/head'
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 import Item from './components/Item'
 import Script from 'next/script'
 import styles from '../styles/BirthList.module.scss'
@@ -11,7 +11,6 @@ import { useAuth } from '../context/AuthUserContext'
 
 const email = process.env.NEXT_PUBLIC_FIREBASE_FIRESTORE_EMAIL
 const db = firebase.firestore()
-const storage = firebase.storage()
 const CATEGORIES = ['Jeux de construction',
   'Jeux de société',
   'Jeux d\'éveil',
@@ -19,7 +18,7 @@ const CATEGORIES = ['Jeux de construction',
   'Plein air'
 ]
 
-export default function Home() {
+export default function Home () {
   const [category, setCategory] = useState('Tout')
   const [loading, setLoading] = useState(false)
   const [password, setPassword] = useState('')
@@ -166,8 +165,8 @@ export default function Home() {
               <>
                 <div className={styles.sublistTitle}>Déjà réservés par le Père Noël</div>
                 <div className={styles.list}>
-                  {giftedItems.length === 0 ?
-                  <div>Rien pour le moment</div>
+                  {giftedItems.length === 0
+                    ? <div>Rien pour le moment</div>
                     : giftedItems.filter((item) => filterItem(item)).map((item) => {
                       return (<Item key={item.id} item={item} database={db} />)
                     })}
