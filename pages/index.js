@@ -90,48 +90,47 @@ export default function Home () {
             <>
               <div className={styles.intro}>
                 <div className={styles.introText}>
-                  <p className={styles.introRaw}>Cher Père Noël,
+                  <p className={styles.introRaw}>
+                    Cher Père Noël,
                     <br></br>
-                    Je m&apos;appelle Romy Anouch W, j&apos;ai 11 mois,
+                    Je m&apos;appelle Romy Anouch Watelet, j&apos;ai 11 mois,
                     <br></br>
-                    Nous ne nous connaissons pas encore, je suis née seulement l&apos;année dernière.
+                    Et c&apos;est la première fois que je t&apos;écris,
                     <br></br>
-                    Mon arrivée dans ce monde à comblé de joie Mama, Papa, ma Mamie et mon Papy Patou,
-                    mon Papy et ma Mamie Marie, Tonton, Tatie, mes Marraines...
+                    Le Nöel dernier était un peu particulier : je n&apos;avais que quelques jours, mais ralala quelqu&apos;est ce que j&apos;avais été gâté, merci encore !
                     <br></br>
-                    Tu peux me croire sur parole : je suis vraiment très très sage,
+                    Bon faut que je te dise, mes parents m&apos;ont embarqué dans une aventure à bord d&apos;une maison sur roue, moi j&apos;aime bien vivre dans cette petite maison, je rencontre plein de monde et c&apos;est plutôt cosy. Mais alors s&apos;ils pense que tu arrivera à déposer tous ce que j&apos;ai demandé là dedans mouhaha ils se trompent mes parents. Non non, le mieux pour la livraison des cadeaux, c&apos;est chez mes papy et mamies, il y aura un joli sapin de Noël éclairé et de la place pour garer ton traineau !
                     <br></br>
-                    Est-ce que la nuit ça compte pour avoir des cadeaux ? (hihi)
+                    Père Noel, tu peux me croire sur parole : je suis vraiment très très sage,
                     <br></br>
-                    Je suis encore trop petite pour découper moi même mes souhaits dans les catalogues de jouet.
+                    Est-ce que dormir la nuit ça compte pour avoir des cadeaux ? (oups...)
                     <br></br>
-                    Mais Papa et Mama m&apos;ont observé m&apos;amuser avec mes copains
-                    et ont noté quelques jouets que j&apos;aimerais bien avoir pour continuer à apprendre, bouger et me divertir.
+                    Je suis encore trop petite pour découper moi même mes souhaits dans les catalogues de jouets.
+                    <br></br>
+                    Mais Papa et Mama m&apos;ont observé m&apos;amuser avec mon copain Noé et mes cousines et ont noté quelques jouets que j&apos;aimerais bien avoir pour continuer à apprendre, bouger et me divertir.
+                    <br></br>
                     Les voilà,
                     <br></br>
                     Merci Père Noël.
                     <br></br>
                     RAW.
-                    <br></br>
                   </p>
                   <p className={styles.introParents}>
-                    Note de Papa et Mama : Il existe plus de mille jouet sur les plateformes comme Le bon coin, Vinted...
-                    ou encore dans les vide-greniers... alors même si les lutins du Père Noël travaillent surement très très bien,
-                    on aimerait vraiment que vous fassiez l&apos;effort de vous tourner vers de l&apos;occasion
-                    (dans la mesure du possible),
-                    <br></br>
-                    Il faut penser à la planète qu&apos;on laissera à Romy plus tard...
-                    <br></br>
-                    Ce n&apos;est pas une liste exhaustive, faites vous plaisir, et cela lui fera forcement plaisir.
-                    Nous ne tenons pas à savoir qui offre quoi, pour avoir la surprise nous aussi (oui, on adore la Magie de Noël)
-                    <br></br>
-                    Alors il vous suffit de cliquer sur &quot;Réserver &quot;
-                    <br></br>
-                    Vous pouvez revenir en arrière à tout moment.
-                    <br></br>
-                    Merci.
-                    <br></br>
-                    L & B
+                  Note de Papa et Mama : vous savez ce que nous pensons du marché de l&apos;occasion, il existe plus de mille jouets sur les plateformes comme Le bon coin, Vinted ou encore dans les vide-greniers... alors même si les lutins du Père Noël travaillent sûrement très très bien, on aimerait vraiment que vous fassiez l&apos;effort de vous tourner vers de l&apos;occasion (dans la mesure du possible),
+                  <br></br>
+Il faut penser à la planète qu&apos;on laissera a Romy plus tard...
+                  <br></br>
+Ce n&apos;est pas une liste exhaustive, faites vous plaisir, cela lui fera forcement plaisir.
+                  <br></br>
+Nous ne tenons pas à savoir qui offre quoi, pour avoir la surprise nous aussi (Oui, on adore la Magie de Noël !)
+                  <br></br>
+Alors il vous suffit de cliquer sur &quot;Réserver&quot;
+                  <br></br>
+Vous pouvez revenir en arrière à tout moment.
+                  <br></br>
+Merci.
+                  <br></br>
+L & B.
                   </p>
                 </div>
                 <div className={styles.introImageContainer}>
