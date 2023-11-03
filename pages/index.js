@@ -97,9 +97,9 @@ export default function Home () {
                     <br></br>
                     Et c&apos;est la première fois que je t&apos;écris,
                     <br></br>
-                    Le Nöel dernier était un peu particulier : je n&apos;avais que quelques jours, mais ralala quelqu&apos;est ce que j&apos;avais été gâté, merci encore !
+                    Le Nöel dernier était un peu particulier : je n&apos;avais que quelques jours, mais ralala qu&apos;est ce que j&apos;avais été gâtée, merci encore !
                     <br></br>
-                    Bon faut que je te dise, mes parents m&apos;ont embarqué dans une aventure à bord d&apos;une maison sur roue, moi j&apos;aime bien vivre dans cette petite maison, je rencontre plein de monde et c&apos;est plutôt cosy. Mais alors s&apos;ils pense que tu arrivera à déposer tous ce que j&apos;ai demandé là dedans mouhaha ils se trompent mes parents. Non non, le mieux pour la livraison des cadeaux, c&apos;est chez mes papy et mamies, il y aura un joli sapin de Noël éclairé et de la place pour garer ton traineau !
+                    Bon faut que je te dise, mes parents m&apos;ont embarqué dans une aventure à bord d&apos;une maison sur roue, moi j&apos;aime bien vivre dans cette petite maison, je rencontre plein de monde et c&apos;est plutôt cosy. Mais alors s&apos;ils pensent que tu arriveras à déposer tout ce que j&apos;ai demandé là dedans mouhaha ils se trompent mes parents. Non non, le mieux pour la livraison des cadeaux, c&apos;est chez mes papys et mamies, il y aura un joli sapin de Noël éclairé et de la place pour garer ton traineau !
                     <br></br>
                     Père Noel, tu peux me croire sur parole : je suis vraiment très très sage,
                     <br></br>
@@ -118,7 +118,7 @@ export default function Home () {
                   <p className={styles.introParents}>
                   Note de Papa et Mama : vous savez ce que nous pensons du marché de l&apos;occasion, il existe plus de mille jouets sur les plateformes comme Le bon coin, Vinted ou encore dans les vide-greniers... alors même si les lutins du Père Noël travaillent sûrement très très bien, on aimerait vraiment que vous fassiez l&apos;effort de vous tourner vers de l&apos;occasion (dans la mesure du possible),
                   <br></br>
-Il faut penser à la planète qu&apos;on laissera a Romy plus tard...
+Il faut penser à la planète qu&apos;on laissera à Romy plus tard...
                   <br></br>
 Ce n&apos;est pas une liste exhaustive, faites vous plaisir, cela lui fera forcement plaisir.
                   <br></br>
