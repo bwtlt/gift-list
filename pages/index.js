@@ -13,9 +13,13 @@ const email = process.env.NEXT_PUBLIC_FIREBASE_FIRESTORE_EMAIL
 const db = firebase.firestore()
 const CATEGORIES = ['Jeux de construction',
   'Jeux de société',
-  'Jeux d\'éveil',
+  'Loisirs créatifs',
   'Jeux éducatifs',
-  'Plein air'
+  'Plein air',
+  'Garde robe',
+  'Musique',
+  'Jeux d\'imagination',
+  'Livres'
 ]
 
 export default function Home () {
@@ -91,46 +95,14 @@ export default function Home () {
               <div className={styles.intro}>
                 <div className={styles.introText}>
                   <p className={styles.introRaw}>
-                    Cher Père Noël,
-                    <br></br>
-                    Je m&apos;appelle Romy Anouch Watelet, j&apos;ai 11 mois,
-                    <br></br>
-                    Et c&apos;est la première fois que je t&apos;écris,
-                    <br></br>
-                    Le Nöel dernier était un peu particulier : je n&apos;avais que quelques jours, mais ralala qu&apos;est ce que j&apos;avais été gâtée, merci encore !
-                    <br></br>
-                    Bon faut que je te dise, mes parents m&apos;ont embarqué dans une aventure à bord d&apos;une maison sur roue, moi j&apos;aime bien vivre dans cette petite maison, je rencontre plein de monde et c&apos;est plutôt cosy. Mais alors s&apos;ils pensent que tu arriveras à déposer tout ce que j&apos;ai demandé là dedans mouhaha ils se trompent mes parents. Non non, le mieux pour la livraison des cadeaux, c&apos;est chez mes papys et mamies, il y aura un joli sapin de Noël éclairé et de la place pour garer ton traineau !
-                    <br></br>
-                    Père Noel, tu peux me croire sur parole : je suis vraiment très très sage,
-                    <br></br>
-                    Est-ce que dormir la nuit ça compte pour avoir des cadeaux ? (oups...)
-                    <br></br>
-                    Je suis encore trop petite pour découper moi même mes souhaits dans les catalogues de jouets.
-                    <br></br>
-                    Mais Papa et Mama m&apos;ont observé m&apos;amuser avec mon copain Noé et mes cousines et ont noté quelques jouets que j&apos;aimerais bien avoir pour continuer à apprendre, bouger et me divertir.
-                    <br></br>
-                    Les voilà,
-                    <br></br>
-                    Merci Père Noël.
-                    <br></br>
-                    RAW.
-                  </p>
-                  <p className={styles.introParents}>
-                  Note de Papa et Mama : vous savez ce que nous pensons du marché de l&apos;occasion, il existe plus de mille jouets sur les plateformes comme Le bon coin, Vinted ou encore dans les vide-greniers... alors même si les lutins du Père Noël travaillent sûrement très très bien, on aimerait vraiment que vous fassiez l&apos;effort de vous tourner vers de l&apos;occasion (dans la mesure du possible),
-                  <br></br>
-Il faut penser à la planète qu&apos;on laissera à Romy plus tard...
-                  <br></br>
-Ce n&apos;est pas une liste exhaustive, faites vous plaisir, cela lui fera forcement plaisir.
-                  <br></br>
-Nous ne tenons pas à savoir qui offre quoi, pour avoir la surprise nous aussi (Oui, on adore la Magie de Noël !)
-                  <br></br>
-Alors il vous suffit de cliquer sur &quot;Réserver&quot;
-                  <br></br>
-Vous pouvez revenir en arrière à tout moment.
-                  <br></br>
-Merci.
-                  <br></br>
-L & B.
+                    Cher Père Noël,<br />
+                    Je m&apos;appelle Romy, j&apos;ai 22 mois,<br />
+                    Mon Papa et ma Mama ont emménagé dans un énoorme appartement, j&apos;ai une chambre à moi toute seule ! C&apos;est vraiment très chouette. Alors je veux pleiiiin de cadeaux, j&apos;adore Mickey et Minnie.<br />
+                    Des cadeaux mais pas trop trop car j&apos;ai aussi mon anniversaire, et puis ma Mama n&apos;est pas trop d&apos;accord, tu comprend elle lit des livres du style &quot;Le minimalisme bla bla bla&quot;...<br />
+                    Père Noel, tu peux me croire sur parole : je suis vraiment très très sage,<br />
+                    Est-ce que dormir la nuit ça compte pour avoir des cadeaux ? (oups)<br />
+                    Merci Père Noël.<br />
+                    Romy Anouch Watelet.<br />
                   </p>
                 </div>
                 <div className={styles.introImageContainer}>
